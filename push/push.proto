@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM. All rights reserved.
+// Copyright © 2023 openchat. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,11 +13,11 @@
 // limitations under the License.
 
 syntax = "proto3";
-package openim.push;
+package openchat.push;
 
 import "sdkws/sdkws.proto";
 
-option go_package = "github.com/openimsdk/protocol/push";
+option go_package = "github.com/liserc/openchat-protocol/push";
 
 message PushMsgReq {
   sdkws.MsgData msgData = 1;

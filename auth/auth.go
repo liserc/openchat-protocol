@@ -17,7 +17,7 @@ package auth
 import (
 	"errors"
 
-	"github.com/openimsdk/protocol/constant"
+	"github.com/liserc/openchat-protocol/constant"
 )
 
 func (x *GetAdminTokenReq) Check() error {

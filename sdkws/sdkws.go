@@ -17,7 +17,7 @@ package sdkws
 import (
 	"errors"
 	"fmt"
-	"github.com/openimsdk/protocol/constant"
+	"github.com/liserc/openchat-protocol/constant"
 )
 
 func (x *MsgData) Check() error {

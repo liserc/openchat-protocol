@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM. All rights reserved.
+// Copyright © 2023 openchat. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,13 +13,13 @@
 // limitations under the License.
 
 syntax = "proto3";
-package openim.user;
+package openchat.user;
 
 import "conversation/conversation.proto";
 import "sdkws/sdkws.proto";
 import "wrapperspb/wrapperspb.proto";
 
-option go_package = "github.com/openimsdk/protocol/user";
+option go_package = "github.com/liserc/openchat-protocol/user";
 
 message getAllUserIDReq {
   sdkws.RequestPagination pagination = 1;
@@ -63,7 +63,7 @@ message setGlobalRecvMessageOptReq {
 message setGlobalRecvMessageOptResp {}
 
 message setConversationReq {
-  openim.conversation.Conversation conversation = 1;
+  openchat.conversation.Conversation conversation = 1;
   int32 notificationType = 2;
   string operationID = 3;
 }
@@ -87,7 +87,7 @@ message getConversationReq {
 }
 
 message getConversationResp {
-  openim.conversation.Conversation conversation = 2;
+  openchat.conversation.Conversation conversation = 2;
 }
 
 message getConversationsReq {
@@ -97,7 +97,7 @@ message getConversationsReq {
 }
 
 message getConversationsResp {
-  repeated openim.conversation.Conversation conversations = 2;
+  repeated openchat.conversation.Conversation conversations = 2;
 }
 
 message getAllConversationsReq {
@@ -106,11 +106,11 @@ message getAllConversationsReq {
 }
 
 message getAllConversationsResp {
-  repeated openim.conversation.Conversation conversations = 2;
+  repeated openchat.conversation.Conversation conversations = 2;
 }
 
 message batchSetConversationsReq {
-  repeated openim.conversation.Conversation conversations = 1;
+  repeated openchat.conversation.Conversation conversations = 1;
   string OwnerUserID = 2;
   int32 notificationType = 3;
   string OperationID = 4;
@@ -216,8 +216,8 @@ message processUserCommandAddReq {
   string userID = 1;
   int32 type = 2;
   string uuid = 3;
-  openim.protobuf.StringValue value = 4;
-  openim.protobuf.StringValue ex = 5;
+  openchat.protobuf.StringValue value = 4;
+  openchat.protobuf.StringValue ex = 5;
 }
 
 message processUserCommandAddResp {}
@@ -234,8 +234,8 @@ message processUserCommandUpdateReq {
   string userID = 1;
   int32 type = 2;
   string uuid = 3;
-  openim.protobuf.StringValue value = 4;
-  openim.protobuf.StringValue ex = 5;
+  openchat.protobuf.StringValue value = 4;
+  openchat.protobuf.StringValue ex = 5;
 }
 
 message processUserCommandUpdateResp {}

@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM. All rights reserved.
+// Copyright © 2023 openchat. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,9 +13,9 @@
 // limitations under the License.
 
 syntax = "proto3";
-package openim.auth;
+package openchat.auth;
 
-option go_package = "github.com/openimsdk/protocol/auth";
+option go_package = "github.com/liserc/openchat-protocol/auth";
 
 message getAdminTokenReq {
   string secret = 1;
@@ -64,7 +64,7 @@ message kickTokensReq {
 message kickTokensResp {}
 
 
-service Auth {
+service auth {
   // Generate token
   rpc getAdminToken(getAdminTokenReq) returns (getAdminTokenResp);
   // Admin retrieves user token

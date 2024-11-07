@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM. All rights reserved.
+// Copyright © 2023 openchat. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,11 +13,11 @@
 // limitations under the License.
 
 syntax = "proto3";
-package openim.sdkws;
+package openchat.sdkws;
 
 import "wrapperspb/wrapperspb.proto";
 
-option go_package = "github.com/openimsdk/protocol/sdkws";
+option go_package = "github.com/liserc/openchat-protocol/sdkws";
 
 ////////////////////////////////base///////////////////////////////
 
@@ -47,10 +47,10 @@ message GroupInfoForSet {
   string notification = 3;
   string introduction = 4;
   string faceURL = 5;
-  openim.protobuf.StringValue ex = 6;
-  openim.protobuf.Int32Value needVerification = 7;
-  openim.protobuf.Int32Value lookMemberInfo = 8;
-  openim.protobuf.Int32Value applyMemberFriend = 9;
+  openchat.protobuf.StringValue ex = 6;
+  openchat.protobuf.Int32Value needVerification = 7;
+  openchat.protobuf.Int32Value lookMemberInfo = 8;
+  openchat.protobuf.Int32Value applyMemberFriend = 9;
 }
 
 message GroupMemberFullInfo {
@@ -87,10 +87,10 @@ message UserInfo {
 
 message UserInfoWithEx {
   string userID = 1;
-  openim.protobuf.StringValue nickname = 2;
-  openim.protobuf.StringValue faceURL = 3;
-  openim.protobuf.StringValue ex = 4;
-  openim.protobuf.Int32Value globalRecvMsgOpt = 7;
+  openchat.protobuf.StringValue nickname = 2;
+  openchat.protobuf.StringValue faceURL = 3;
+  openchat.protobuf.StringValue ex = 4;
+  openchat.protobuf.Int32Value globalRecvMsgOpt = 7;
 }
 
 message FriendInfo {

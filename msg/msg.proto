@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM. All rights reserved.
+// Copyright © 2023 openchat. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,12 +13,12 @@
 // limitations under the License.
 
 syntax = "proto3";
-package openim.msg;
+package openchat.msg;
 
 import "conversation/conversation.proto";
 import "sdkws/sdkws.proto";
 
-option go_package = "github.com/openimsdk/protocol/msg";
+option go_package = "github.com/liserc/openchat-protocol/msg";
 
 message MsgDataToMQ {
   string token = 1;
@@ -375,7 +375,7 @@ message GetStreamMsgResp {
   int64 deadlineTime = 7;
 }
 
-service msg {
+service Msg {
   //获取最小最大seq（包括用户的，以及指定群组的）
   rpc GetMaxSeq(sdkws.GetMaxSeqReq) returns (sdkws.GetMaxSeqResp);
   //获取会话列表的最大seq

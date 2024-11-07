@@ -1,12 +1,12 @@
 syntax = "proto3";
-package openim.rtc;
+package openchat.rtc;
 import "sdkws/sdkws.proto";
-option go_package = "github.com/openimsdk/protocol/rtc";
+option go_package = "github.com/liserc/openchat-protocol/rtc";
 
 message ParticipantMetaData{
-  openim.sdkws.GroupInfo groupInfo = 1;
-  openim.sdkws.GroupMemberFullInfo groupMemberInfo = 2;
-  openim.sdkws.PublicUserInfo userInfo = 3;
+  openchat.sdkws.GroupInfo groupInfo = 1;
+  openchat.sdkws.GroupMemberFullInfo groupMemberInfo = 2;
+  openchat.sdkws.PublicUserInfo userInfo = 3;
 }
 
 message GetJoinTokenReq{

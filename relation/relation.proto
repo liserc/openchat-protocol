@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM. All rights reserved.
+// Copyright © 2023 openchat. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,19 +13,19 @@
 // limitations under the License.
 
 syntax = "proto3";
-package openim.relation;
+package openchat.relation;
 
 import "sdkws/sdkws.proto";
 import "wrapperspb/wrapperspb.proto";
 
-option go_package = "github.com/openimsdk/protocol/relation";
+option go_package = "github.com/liserc/openchat-protocol/relation";
 
 message getPaginationFriendsReq {
-  openim.sdkws.RequestPagination pagination = 1;
+  openchat.sdkws.RequestPagination pagination = 1;
   string userID = 2;
 }
 message getPaginationFriendsResp {
-  repeated openim.sdkws.FriendInfo friendsInfo = 1;
+  repeated openchat.sdkws.FriendInfo friendsInfo = 1;
   int32 total = 2;
 }
 
@@ -59,10 +59,10 @@ message importFriendResp {}
 
 message getPaginationFriendsApplyToReq {
   string userID = 1;
-  openim.sdkws.RequestPagination pagination = 2;
+  openchat.sdkws.RequestPagination pagination = 2;
 }
 message getPaginationFriendsApplyToResp {
-  repeated openim.sdkws.FriendRequest FriendRequests = 1;
+  repeated openchat.sdkws.FriendRequest FriendRequests = 1;
   int32 total = 2;
 }
 
@@ -72,7 +72,7 @@ message getDesignatedFriendsApplyReq {
 }
 
 message getDesignatedFriendsApplyResp {
-  repeated openim.sdkws.FriendRequest friendRequests = 1;
+  repeated openchat.sdkws.FriendRequest friendRequests = 1;
 }
 
 message getIncrementalFriendsApplyToReq {
@@ -85,7 +85,7 @@ message getIncrementalFriendsApplyToResp {
   string versionID = 2;
   bool full = 3;
   repeated string deleteUserIds = 4;
-  repeated openim.sdkws.FriendRequest changes = 5;
+  repeated openchat.sdkws.FriendRequest changes = 5;
 }
 
 message getIncrementalFriendsApplyFromReq {
@@ -98,7 +98,7 @@ message getIncrementalFriendsApplyFromResp {
   string versionID = 2;
   bool full = 3;
   repeated string deleteUserIds = 4;
-  repeated openim.sdkws.FriendRequest changes = 5;
+  repeated openchat.sdkws.FriendRequest changes = 5;
 }
 
 message getDesignatedFriendsReq {
@@ -106,7 +106,7 @@ message getDesignatedFriendsReq {
   repeated string friendUserIDs = 2;
 }
 message getDesignatedFriendsResp {
-  repeated openim.sdkws.FriendInfo friendsInfo = 1;
+  repeated openchat.sdkws.FriendInfo friendsInfo = 1;
 }
 
 message addBlackReq {
@@ -124,10 +124,10 @@ message removeBlackResp {}
 
 message getPaginationBlacksReq {
   string userID = 1;
-  openim.sdkws.RequestPagination pagination = 2;
+  openchat.sdkws.RequestPagination pagination = 2;
 }
 message getPaginationBlacksResp {
-  repeated openim.sdkws.BlackInfo blacks = 1;
+  repeated openchat.sdkws.BlackInfo blacks = 1;
   int32 total = 2;
 }
 
@@ -168,9 +168,9 @@ message respondFriendApplyResp {}
 message updateFriendsReq {
   string ownerUserID = 1;
   repeated string friendUserIDs = 2;
-  openim.protobuf.BoolValue isPinned = 3;
-  openim.protobuf.StringValue remark = 4;
-  openim.protobuf.StringValue ex = 5;
+  openchat.protobuf.BoolValue isPinned = 3;
+  openchat.protobuf.StringValue remark = 4;
+  openchat.protobuf.StringValue ex = 5;
 }
 message updateFriendsResp {}
 
@@ -183,10 +183,10 @@ message setFriendRemarkResp {}
 
 message getPaginationFriendsApplyFromReq {
   string userID = 1;
-  openim.sdkws.RequestPagination pagination = 2;
+  openchat.sdkws.RequestPagination pagination = 2;
 }
 message getPaginationFriendsApplyFromResp {
-  repeated openim.sdkws.FriendRequest friendRequests = 1;
+  repeated openchat.sdkws.FriendRequest friendRequests = 1;
   int32 total = 2;
 }
 
@@ -204,9 +204,9 @@ message getSpecifiedFriendsInfoReq {
 }
 
 message getSpecifiedFriendsInfoInfo {
-  openim.sdkws.UserInfo userInfo = 1;
-  openim.sdkws.FriendInfo friendInfo = 2;
-  openim.sdkws.BlackInfo blackInfo = 3;
+  openchat.sdkws.UserInfo userInfo = 1;
+  openchat.sdkws.FriendInfo friendInfo = 2;
+  openchat.sdkws.BlackInfo blackInfo = 3;
 }
 
 message getSpecifiedFriendsInfoResp {
@@ -224,8 +224,8 @@ message getIncrementalFriendsResp {
   string versionID = 2;
   bool full = 3;
   repeated string delete = 4;
-  repeated openim.sdkws.FriendInfo insert = 5;
-  repeated openim.sdkws.FriendInfo update = 6;
+  repeated openchat.sdkws.FriendInfo insert = 5;
+  repeated openchat.sdkws.FriendInfo update = 6;
   uint64 sortVersion = 7;
 }
 
@@ -239,8 +239,8 @@ message getIncrementalBlacksResp {
   string versionID = 2;
   bool full = 3;
   repeated string delete = 4;
-  repeated openim.sdkws.BlackInfo insert = 5;
-  repeated openim.sdkws.BlackInfo update = 6;
+  repeated openchat.sdkws.BlackInfo insert = 5;
+  repeated openchat.sdkws.BlackInfo update = 6;
 }
 
 message GetSpecifiedBlacksReq {
@@ -249,7 +249,7 @@ message GetSpecifiedBlacksReq {
 }
 
 message GetSpecifiedBlacksResp {
-  repeated openim.sdkws.BlackInfo blacks = 1;
+  repeated openchat.sdkws.BlackInfo blacks = 1;
   int32 total = 2;
 }
 
@@ -267,8 +267,8 @@ message getFullFriendUserIDsResp {
 
 message notificationUserInfoUpdateReq {
   string userID = 1;
-  openim.sdkws.UserInfo oldUserInfo = 2;
-  openim.sdkws.UserInfo newUserInfo = 3;
+  openchat.sdkws.UserInfo oldUserInfo = 2;
+  openchat.sdkws.UserInfo newUserInfo = 3;
 }
 
 message notificationUserInfoUpdateResp {}

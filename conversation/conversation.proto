@@ -1,4 +1,4 @@
-// Copyright © 2023 OpenIM. All rights reserved.
+// Copyright © 2023 openchat. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,12 +13,12 @@
 // limitations under the License.
 
 syntax = "proto3";
-package openim.conversation;
+package openchat.conversation;
 
 import "sdkws/sdkws.proto";
 import "wrapperspb/wrapperspb.proto";
 
-option go_package = "github.com/openimsdk/protocol/conversation";
+option go_package = "github.com/liserc/openchat-protocol/conversation";
 
 message Conversation {
   string ownerUserID = 1;
@@ -45,17 +45,17 @@ message ConversationReq {
   int32 conversationType = 2;
   string userID = 3;
   string groupID = 4;
-  openim.protobuf.Int32Value recvMsgOpt = 5;
-  openim.protobuf.BoolValue isPinned = 6;
-  openim.protobuf.StringValue attachedInfo = 7;
-  openim.protobuf.BoolValue isPrivateChat = 8;
-  openim.protobuf.StringValue ex = 9;
-  openim.protobuf.Int32Value burnDuration = 10;
-  openim.protobuf.Int64Value minSeq = 11;
-  openim.protobuf.Int64Value maxSeq = 12;
-  openim.protobuf.Int32Value groupAtType = 13;
-  openim.protobuf.Int64Value msgDestructTime = 14;
-  openim.protobuf.BoolValue isMsgDestruct = 15;
+  openchat.protobuf.Int32Value recvMsgOpt = 5;
+  openchat.protobuf.BoolValue isPinned = 6;
+  openchat.protobuf.StringValue attachedInfo = 7;
+  openchat.protobuf.BoolValue isPrivateChat = 8;
+  openchat.protobuf.StringValue ex = 9;
+  openchat.protobuf.Int32Value burnDuration = 10;
+  openchat.protobuf.Int64Value minSeq = 11;
+  openchat.protobuf.Int64Value maxSeq = 12;
+  openchat.protobuf.Int32Value groupAtType = 13;
+  openchat.protobuf.Int64Value msgDestructTime = 14;
+  openchat.protobuf.BoolValue isMsgDestruct = 15;
 }
 
 message SetConversationReq {
@@ -221,18 +221,18 @@ message GetConversationNotReceiveMessageUserIDsResp {
 message UpdateConversationReq {
   string conversationID = 1;
   repeated string userIDs = 2;
-  openim.protobuf.Int32Value recvMsgOpt = 3;
-  openim.protobuf.BoolValue isPinned = 4;
-  openim.protobuf.StringValue attachedInfo = 5;
-  openim.protobuf.BoolValue isPrivateChat = 6;
-  openim.protobuf.StringValue ex = 7;
-  openim.protobuf.Int32Value burnDuration = 8;
-  openim.protobuf.Int64Value minSeq = 9;
-  openim.protobuf.Int64Value maxSeq = 10;
-  openim.protobuf.Int32Value groupAtType = 11;
-  openim.protobuf.Int64Value msgDestructTime = 12;
-  openim.protobuf.BoolValue isMsgDestruct = 13;
-  openim.protobuf.Int64Value latestMsgDestructTime = 14;
+  openchat.protobuf.Int32Value recvMsgOpt = 3;
+  openchat.protobuf.BoolValue isPinned = 4;
+  openchat.protobuf.StringValue attachedInfo = 5;
+  openchat.protobuf.BoolValue isPrivateChat = 6;
+  openchat.protobuf.StringValue ex = 7;
+  openchat.protobuf.Int32Value burnDuration = 8;
+  openchat.protobuf.Int64Value minSeq = 9;
+  openchat.protobuf.Int64Value maxSeq = 10;
+  openchat.protobuf.Int32Value groupAtType = 11;
+  openchat.protobuf.Int64Value msgDestructTime = 12;
+  openchat.protobuf.BoolValue isMsgDestruct = 13;
+  openchat.protobuf.Int64Value latestMsgDestructTime = 14;
 }
 
 message UpdateConversationResp {}
@@ -266,7 +266,7 @@ message GetIncrementalConversationResp {
 
 message GetOwnerConversationReq {
   string userID = 1;
-  openim.sdkws.RequestPagination pagination = 2;
+  openchat.sdkws.RequestPagination pagination = 2;
 }
 
 message GetOwnerConversationResp {
