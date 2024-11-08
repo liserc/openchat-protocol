@@ -1,2 +1,2 @@
 # openchat-protocol
-## 开言IM即时通讯协议库
+## 开言IM即时通信协议库
