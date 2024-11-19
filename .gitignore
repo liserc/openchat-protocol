@@ -13,6 +13,7 @@ _output/
 
 
 # files used by the developer
+.idea/
 .idea.md
 .todo.md
 .note.md
