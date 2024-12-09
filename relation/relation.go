@@ -17,7 +17,7 @@ package relation
 import (
 	"errors"
 	"fmt"
-	"github.com/openimsdk/protocol/constant"
+	"github.com/liserc/openchat-protocol/constant"
 )
 
 func (x *GetPaginationFriendsReq) Check() error {

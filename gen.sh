@@ -17,7 +17,7 @@ PROTO_NAMES=(
 )
 
 for name in "${PROTO_NAMES[@]}"; do
- protoc --go_out=./${name} --go_opt=module=github.com/openimsdk/protocol/${name} ${name}/${name}.proto
+ protoc --go_out=./${name} --go_opt=module=github.com/liserc/openchat-protocol/${name} ${name}/${name}.proto
   if [ $? -ne 0 ]; then
       echo "error processing ${name}.proto (go_out)"
       exit $?
@@ -27,7 +27,7 @@ done
 # generate go-grpc
 
 for name in "${PROTO_NAMES[@]}"; do
- protoc --go-grpc_out=./${name} --go-grpc_opt=module=github.com/openimsdk/protocol/${name} ${name}/${name}.proto
+ protoc --go-grpc_out=./${name} --go-grpc_opt=module=github.com/liserc/openchat-protocol/${name} ${name}/${name}.proto
   if [ $? -ne 0 ]; then
       echo "error processing ${name}.proto (go-grpc_out)"
       exit $?

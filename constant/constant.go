@@ -136,6 +136,8 @@ const (
 	WriteGroupChatType   = 2
 	ReadGroupChatType    = 3
 	NotificationChatType = 4
+	CustomChatType       = 5
+
 	// token.
 	NormalToken  = 0
 	InValidToken = 1

@@ -1,4 +1,4 @@
-module github.com/openimsdk/protocol
+module github.com/liserc/openchat-protocol
 
 go 1.22.7
 
